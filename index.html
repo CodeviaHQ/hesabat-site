@@ -533,12 +533,18 @@ function doLogin(){
   if(!acc || acc.pass!==p){ document.getElementById('login-error').style.display='block'; return; }
   document.getElementById('login-error').style.display='none';
   currentUser = acc;
-  const initial = acc.label[0].toUpperCase();
-  document.getElementById('user-badge').textContent    = acc.label;
+  // Sessiyanı saxla — refresh-dən sonra da qalsın
+  sessionStorage.setItem('zepin_session', JSON.stringify({id:acc.id, label:acc.label, readonly:acc.readonly}));
+  enterApp();
+}
+
+function enterApp(){
+  const initial = currentUser.label[0].toUpperCase();
+  document.getElementById('user-badge').textContent    = currentUser.label;
   document.getElementById('user-avatar').textContent   = initial;
   document.getElementById('udrop-avatar').textContent  = initial;
-  document.getElementById('udrop-uname').textContent   = acc.label;
-  document.getElementById('udrop-role').textContent    = acc.readonly ? 'Hesabat Görüntüləyici' : 'İstifadəçi';
+  document.getElementById('udrop-uname').textContent   = currentUser.label;
+  document.getElementById('udrop-role').textContent    = currentUser.readonly ? 'Hesabat Görüntüləyici' : 'İstifadəçi';
   document.getElementById('login-screen').style.display = 'none';
   document.getElementById('app').style.display = 'flex';
   setupReadOnly();
@@ -547,11 +553,12 @@ function doLogin(){
   populateDateSelects('x-gun','x-ay','x-il');
   populateDateSelects('hm-gun','hm-ay','hm-il');
   populateDateSelects('xat-gun','xat-ay','xat-il');
-  if(acc.id==='admin'){ loadAdminData(); } else { loadData(acc.id); }
+  if(currentUser.id==='admin'){ loadAdminData(); } else { loadData(currentUser.id); }
 }
 
 function doLogout(){
   currentUser=null;
+  sessionStorage.removeItem('zepin_session');
   document.getElementById('login-screen').style.display='flex';
   document.getElementById('app').style.display='none';
   document.getElementById('login-user').value='';
@@ -928,9 +935,26 @@ document.getElementById('login-user').addEventListener('keydown',e=>{ if(e.key==
 document.querySelectorAll('.modal-overlay').forEach(ov=>{ ov.addEventListener('click',e=>{ if(e.target===ov) ov.classList.remove('open'); }); });
 ['t-gun','t-ay','t-il'].forEach(id=>{ document.getElementById(id).addEventListener('change',()=>refreshTarixce()); });
 
-// ===== INIT — loading overlay gizlət, login göstər =====
+// ===== INIT =====
 window.addEventListener('load', ()=>{
   document.getElementById('loading-overlay').style.display='none';
+  // Əvvəlki sessiyanı yoxla (refresh üçün)
+  try {
+    const saved = sessionStorage.getItem('zepin_session');
+    if(saved){
+      const sess = JSON.parse(saved);
+      // ACCOUNTS-dan tam obyekti tap
+      const acc = Object.values(ACCOUNTS).find(a=>a.id===sess.id);
+      if(acc){
+        currentUser = acc;
+        // LocalStorage-dən ani yüklə, ekranı göstər
+        if(acc.id==='admin'){ loadLocal('1'); loadLocal('2'); } else { loadLocal(acc.id); }
+        enterApp();
+        return;
+      }
+    }
+  } catch(e){}
+  // Sessiya yoxdursa login göstər
   document.getElementById('login-screen').style.display='flex';
 });
 </script>
