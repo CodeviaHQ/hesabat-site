@@ -519,32 +519,15 @@ function saveData(uid){
 
 // ===== DATA LOAD =====
 function loadForUser(uid){
+  // HƏMİŞƏ yalnız localStorage-dən yüklə
+  // Sheets yalnız YAZMA üçün istifadə olunur, oxuma üçün YOX
   if(uid==='admin'){
     lsLoad('1'); lsLoad('2');
-    refreshAll();
-    syncStatus('syncing','Sheets-dən yüklənir...');
-    Promise.all([gsGet('1'), gsGet('2')]).then(([d1,d2])=>{
-      let changed=false;
-      if(d1){ if(d1.sales) sales['1']=d1.sales; if(d1.expenses) expenses['1']=d1.expenses; if(d1.hazir) hazirMehsullar['1']=d1.hazir; if(d1.xatirlatmalar) xatirlatmalar['1']=d1.xatirlatmalar; lsSave('1'); changed=true; }
-      if(d2){ if(d2.sales) sales['2']=d2.sales; if(d2.expenses) expenses['2']=d2.expenses; if(d2.hazir) hazirMehsullar['2']=d2.hazir; if(d2.xatirlatmalar) xatirlatmalar['2']=d2.xatirlatmalar; lsSave('2'); changed=true; }
-      if(changed){ refreshAll(); syncStatus('ok','Sinxron edildi ✓'); }
-      else syncStatus('ok','Hazır');
-    });
   } else {
-    lsLoad(uid);    // ANI — lokal
-    refreshAll();   // ekranı dərhal göstər
-    syncStatus('syncing','Sheets-dən yüklənir...');
-    gsGet(uid).then(data=>{
-      if(!data){ syncStatus('ok','Lokal məlumatlar göstərilir'); return; }
-      sales[uid]          = data.sales         || sales[uid]         || [];
-      expenses[uid]       = data.expenses      || expenses[uid]      || [];
-      hazirMehsullar[uid] = data.hazir         || hazirMehsullar[uid]|| [];
-      xatirlatmalar[uid]  = data.xatirlatmalar || xatirlatmalar[uid] || [];
-      lsSave(uid);
-      refreshAll();
-      syncStatus('ok','Sinxron edildi ✓');
-    });
+    lsLoad(uid);
   }
+  refreshAll();
+  syncStatus('ok','Hazır');
 }
 
 // ===== LOGIN =====
