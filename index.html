@@ -13,8 +13,6 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden;}
-
-  /* LOGIN */
   #login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;
     background:radial-gradient(ellipse at 30% 20%,#1a1a2e 0%,#0d0f14 60%);position:relative;}
   #login-screen::before{content:'';position:absolute;inset:0;
@@ -34,11 +32,7 @@
     text-transform:uppercase;cursor:pointer;margin-top:8px;transition:transform .15s,box-shadow .15s;}
   .btn-login:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,168,76,.3);}
   .login-error{color:var(--danger);font-size:.82rem;text-align:center;margin-top:12px;display:none;}
-
-  /* APP */
   #app{display:none;flex-direction:column;min-height:100vh;}
-
-  /* TOPBAR */
   .topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 32px;display:flex;
     align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:200;}
   .topbar-brand{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--accent);letter-spacing:2px;}
@@ -48,8 +42,6 @@
   .nav-btn:hover{color:var(--text);background:var(--surface2);}
   .nav-btn.active{color:var(--accent);background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2);}
   .topbar-right{display:flex;align-items:center;gap:8px;position:relative;}
-
-  /* USER DROPDOWN */
   .user-btn{display:flex;align-items:center;gap:8px;background:var(--surface2);border:1px solid var(--border);
     border-radius:20px;padding:5px 14px 5px 10px;cursor:pointer;transition:border-color .2s;position:relative;}
   .user-btn:hover{border-color:var(--accent);}
@@ -58,7 +50,6 @@
   .user-btn.open .user-btn-arrow{transform:rotate(180deg);}
   .user-avatar{width:26px;height:26px;background:linear-gradient(135deg,var(--accent),var(--accent2));
     border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:#0d0f14;}
-
   .user-dropdown{position:absolute;top:calc(100% + 10px);right:0;width:300px;
     background:var(--surface);border:1px solid var(--border);border-radius:14px;
     box-shadow:0 20px 60px rgba(0,0,0,.5);z-index:300;display:none;overflow:hidden;}
@@ -74,7 +65,6 @@
   .xatirlatma-list{display:flex;flex-direction:column;gap:6px;max-height:180px;overflow-y:auto;}
   .xatirlatma-item{background:var(--surface2);border:1px solid var(--border);border-radius:8px;
     padding:8px 12px;display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
-  .xatirlatma-item-left{}
   .xatirlatma-item-ad{font-size:.82rem;font-weight:600;color:var(--text);}
   .xatirlatma-item-mebl{font-size:.78rem;color:var(--accent);font-weight:600;}
   .xatirlatma-item-qeyd{font-size:.72rem;color:var(--muted);margin-top:2px;}
@@ -97,16 +87,12 @@
   .btn-logout2{width:100%;background:none;border:1px solid var(--border);border-radius:8px;
     padding:8px;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.82rem;cursor:pointer;transition:all .2s;}
   .btn-logout2:hover{color:var(--danger);border-color:var(--danger);}
-
-  /* MAIN */
   .main{flex:1;padding:32px;max-width:1100px;margin:0 auto;width:100%;}
   .tab{display:none;} .tab.active{display:block;}
-
   .section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px;}
   .section-title{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--text);}
   .section-title span{color:var(--accent);}
   .section-actions{display:flex;gap:8px;flex-wrap:wrap;}
-
   .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:8px;
     padding:10px 20px;color:#0d0f14;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;
     cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;}
@@ -115,33 +101,25 @@
     padding:10px 20px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;
     cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;}
   .btn-secondary:hover{border-color:var(--accent);color:var(--accent);}
-
-  /* HAZIR MEHSULLAR GRID */
   .hazir-section{margin-bottom:28px;}
   .hazir-section-title{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;}
   .hazir-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
   @media(max-width:900px){.hazir-grid{grid-template-columns:repeat(3,1fr);}}
   @media(max-width:560px){.hazir-grid{grid-template-columns:repeat(2,1fr);}}
-  .hazir-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px;
-    position:relative;transition:border-color .2s;}
+  .hazir-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px;position:relative;transition:border-color .2s;}
   .hazir-card:hover{border-color:rgba(201,168,76,.3);}
-  .hazir-card-name{font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:4px;
-    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .hazir-card-name{font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .hazir-card-maya{font-size:.72rem;color:var(--muted);}
   .hazir-card-qiymet{font-size:.85rem;color:var(--accent);font-weight:600;margin-top:2px;}
   .hazir-card-actions{display:flex;gap:4px;margin-top:8px;}
   .btn-sat{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:5px;
     padding:5px 8px;color:#0d0f14;font-size:.7rem;font-weight:700;cursor:pointer;flex:1;transition:transform .1s;}
   .btn-sat:hover{transform:scale(1.04);}
-  .btn-edit-small{background:var(--surface2);border:1px solid var(--border);border-radius:5px;
-    padding:5px 7px;color:var(--muted);font-size:.7rem;cursor:pointer;transition:color .15s;}
+  .btn-edit-small{background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:5px 7px;color:var(--muted);font-size:.7rem;cursor:pointer;transition:color .15s;}
   .btn-edit-small:hover{color:var(--accent);}
-  .btn-del-small{background:var(--surface2);border:1px solid var(--border);border-radius:5px;
-    padding:5px 7px;color:var(--muted);font-size:.7rem;cursor:pointer;transition:color .15s;}
+  .btn-del-small{background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:5px 7px;color:var(--muted);font-size:.7rem;cursor:pointer;transition:color .15s;}
   .btn-del-small:hover{color:var(--danger);}
   .hazir-empty{grid-column:1/-1;text-align:center;padding:24px;color:var(--muted);font-size:.85rem;}
-
-  /* TABLE */
   .table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
   table{width:100%;border-collapse:collapse;}
   thead{background:var(--surface2);}
@@ -151,8 +129,6 @@
   .badge-price{color:var(--accent);font-weight:600;}
   .badge-cost{color:var(--muted);}
   .badge-profit{color:var(--success);font-weight:600;}
-
-  /* MODAL */
   .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;
     justify-content:center;z-index:500;backdrop-filter:blur(4px);}
   .modal-overlay.open{display:flex;}
@@ -170,8 +146,6 @@
   .btn-cancel{background:none;border:1px solid var(--border);border-radius:8px;padding:10px 20px;
     color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.85rem;cursor:pointer;transition:all .2s;}
   .btn-cancel:hover{border-color:var(--muted);color:var(--text);}
-
-  /* HESABAT */
   .hesabat-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px;}
   .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;position:relative;overflow:hidden;}
   .stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),transparent);}
@@ -183,39 +157,43 @@
   .stat-card.green .stat-value{color:var(--success);}
   .stat-card.red .stat-value{color:var(--danger);}
   .stat-card.blue .stat-value{color:var(--info);}
-
   .hesabat-export{background:var(--surface);border:1px solid var(--border);border-radius:12px;
     padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
-
-  /* FILTER ROW */
   .filter-row{display:flex;align-items:center;gap:12px;margin-bottom:24px;background:var(--surface);
     border:1px solid var(--border);border-radius:10px;padding:16px 20px;flex-wrap:wrap;}
   .filter-row label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
   .filter-row select{background:var(--surface2);border:1px solid var(--border);border-radius:6px;
     padding:8px 12px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.85rem;outline:none;}
-
-  /* EMPTY */
   .empty-state{text-align:center;padding:60px 20px;color:var(--muted);}
   .empty-state .icon{font-size:3rem;margin-bottom:12px;opacity:.4;}
   .empty-state p{font-size:.9rem;}
-
-  /* XERC */
   .xerc-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;
     display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;transition:border-color .2s;}
   .xerc-item:hover{border-color:rgba(201,168,76,.2);}
   .xerc-name{font-size:.92rem;font-weight:500;}
   .xerc-date{font-size:.78rem;color:var(--muted);margin-top:3px;}
   .xerc-amount{font-size:1.1rem;font-weight:600;color:var(--danger);}
-
   .readonly-notice{background:rgba(232,197,122,.08);border:1px solid rgba(201,168,76,.2);border-radius:10px;
     padding:12px 18px;font-size:.83rem;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:8px;}
-
-  .btn-del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.8rem;padding:4px 8px;
-    border-radius:4px;transition:color .15s;}
+  .btn-del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.8rem;padding:4px 8px;border-radius:4px;transition:color .15s;}
   .btn-del:hover{color:var(--danger);}
-
   .divider{border:none;border-top:1px solid var(--border);margin:20px 0;}
-
+  /* SYNC STATUS */
+  .sync-bar{position:fixed;bottom:18px;right:18px;background:var(--surface);border:1px solid var(--border);
+    border-radius:10px;padding:8px 16px;font-size:.75rem;color:var(--muted);z-index:999;
+    display:flex;align-items:center;gap:8px;transition:all .3s;box-shadow:0 4px 20px rgba(0,0,0,.3);}
+  .sync-dot{width:7px;height:7px;border-radius:50%;background:var(--muted);}
+  .sync-bar.syncing .sync-dot{background:var(--accent);animation:pulse .8s infinite;}
+  .sync-bar.ok .sync-dot{background:var(--success);}
+  .sync-bar.err .sync-dot{background:var(--danger);}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  /* LOADING OVERLAY */
+  .loading-overlay{position:fixed;inset:0;background:rgba(13,15,20,.85);display:flex;flex-direction:column;
+    align-items:center;justify-content:center;z-index:9999;gap:16px;}
+  .loading-spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent);
+    border-radius:50%;animation:spin .8s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .loading-text{font-size:.85rem;color:var(--muted);}
   @media(max-width:600px){
     .topbar{padding:0 14px;}
     .main{padding:18px 12px;}
@@ -228,8 +206,20 @@
 </head>
 <body>
 
+<!-- LOADING -->
+<div class="loading-overlay" id="loading-overlay">
+  <div class="loading-spinner"></div>
+  <div class="loading-text">Məlumatlar yüklənir...</div>
+</div>
+
+<!-- SYNC BAR -->
+<div class="sync-bar" id="sync-bar">
+  <div class="sync-dot"></div>
+  <span id="sync-text">Hazır</span>
+</div>
+
 <!-- LOGIN -->
-<div id="login-screen">
+<div id="login-screen" style="display:none">
   <div class="login-box">
     <div class="login-logo">
       <h1>Zepin</h1>
@@ -264,7 +254,6 @@
         <span class="user-btn-name" id="user-badge">—</span>
         <span class="user-btn-arrow">▼</span>
       </div>
-      <!-- USER DROPDOWN -->
       <div class="user-dropdown" id="user-dropdown">
         <div class="udrop-header">
           <div class="udrop-avatar" id="udrop-avatar">Z</div>
@@ -301,7 +290,6 @@
   </div>
 
   <div class="main">
-
     <!-- MƏHSULLAR TAB -->
     <div class="tab active" id="tab-mehsullar">
       <div class="section-header">
@@ -312,38 +300,23 @@
         </div>
       </div>
       <div id="readonly-mehsullar"></div>
-
-      <!-- HAZIR MƏHSULLAR -->
-      <div class="hazir-section" id="hazir-section">
+      <div class="hazir-section">
         <div class="hazir-section-title">Hazır Məhsullar — Sürətli Satış</div>
-        <div class="hazir-grid" id="hazir-grid">
-          <div class="hazir-empty">Hələ hazır məhsul əlavə edilməyib</div>
-        </div>
+        <div class="hazir-grid" id="hazir-grid"><div class="hazir-empty">Hələ hazır məhsul əlavə edilməyib</div></div>
       </div>
-
       <hr class="divider">
-
-      <!-- SATIŞ CƏDVƏLİ -->
       <div style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;">Satış Tarixçəsi</div>
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr>
-              <th>#</th><th>Məhsul adı</th><th>Maya dəyəri</th><th>Satış qiyməti</th><th>Mənfəət</th><th>Tarix</th><th></th>
-            </tr>
-          </thead>
-          <tbody id="mehsullar-tbody">
-            <tr><td colspan="7"><div class="empty-state"><div class="icon">📦</div><p>Hələ satış əlavə edilməyib</p></div></td></tr>
-          </tbody>
+          <thead><tr><th>#</th><th>Məhsul adı</th><th>Maya dəyəri</th><th>Satış qiyməti</th><th>Mənfəət</th><th>Tarix</th><th></th></tr></thead>
+          <tbody id="mehsullar-tbody"><tr><td colspan="7"><div class="empty-state"><div class="icon">📦</div><p>Hələ satış əlavə edilməyib</p></div></td></tr></tbody>
         </table>
       </div>
     </div>
 
     <!-- HESABAT TAB -->
     <div class="tab" id="tab-hesabat">
-      <div class="section-header">
-        <div class="section-title">Maliyyə <span>Hesabatı</span></div>
-      </div>
+      <div class="section-header"><div class="section-title">Maliyyə <span>Hesabatı</span></div></div>
       <div id="readonly-hesabat"></div>
       <div class="filter-row" style="margin-bottom:20px;">
         <label>Tarixə görə:</label>
@@ -353,22 +326,10 @@
         <button class="btn-secondary" style="padding:8px 14px;font-size:.8rem" onclick="resetHesabatFilter()">✕ Sıfırla</button>
       </div>
       <div class="hesabat-grid">
-        <div class="stat-card">
-          <div class="stat-label">Ümumi Dövriyyə (Ciro)</div>
-          <div class="stat-value" id="stat-ciro">0,00 ₼</div>
-        </div>
-        <div class="stat-card blue">
-          <div class="stat-label">Maya Dəyəri Toplamı</div>
-          <div class="stat-value" id="stat-maya">0,00 ₼</div>
-        </div>
-        <div class="stat-card red">
-          <div class="stat-label">Ümumi Xərc</div>
-          <div class="stat-value" id="stat-xerc">0,00 ₼</div>
-        </div>
-        <div class="stat-card green">
-          <div class="stat-label">Xalis Qazanc</div>
-          <div class="stat-value" id="stat-net">0,00 ₼</div>
-        </div>
+        <div class="stat-card"><div class="stat-label">Ümumi Dövriyyə (Ciro)</div><div class="stat-value" id="stat-ciro">0,00 ₼</div></div>
+        <div class="stat-card blue"><div class="stat-label">Maya Dəyəri Toplamı</div><div class="stat-value" id="stat-maya">0,00 ₼</div></div>
+        <div class="stat-card red"><div class="stat-label">Ümumi Xərc</div><div class="stat-value" id="stat-xerc">0,00 ₼</div></div>
+        <div class="stat-card green"><div class="stat-label">Xalis Qazanc</div><div class="stat-value" id="stat-net">0,00 ₼</div></div>
       </div>
       <div class="hesabat-export">
         <span style="font-size:.85rem;color:var(--muted);">Cari filtreye görə fayl yüklə:</span>
@@ -378,9 +339,7 @@
 
     <!-- TARİXÇƏ TAB -->
     <div class="tab" id="tab-tarixce">
-      <div class="section-header">
-        <div class="section-title">Satış <span>Tarixçəsi</span></div>
-      </div>
+      <div class="section-header"><div class="section-title">Satış <span>Tarixçəsi</span></div></div>
       <div class="filter-row">
         <label>Tarix:</label>
         <select id="t-gun"><option value="">Bütün günlər</option></select>
@@ -390,12 +349,8 @@
       </div>
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr><th>#</th><th>Məhsul adı</th><th>Maya dəyəri</th><th>Satış qiyməti</th><th>Mənfəət</th><th>Tarix</th></tr>
-          </thead>
-          <tbody id="tarixce-tbody">
-            <tr><td colspan="6"><div class="empty-state"><div class="icon">📋</div><p>Tarixçə boşdur</p></div></td></tr>
-          </tbody>
+          <thead><tr><th>#</th><th>Məhsul adı</th><th>Maya dəyəri</th><th>Satış qiyməti</th><th>Mənfəət</th><th>Tarix</th></tr></thead>
+          <tbody id="tarixce-tbody"><tr><td colspan="6"><div class="empty-state"><div class="icon">📋</div><p>Tarixçə boşdur</p></div></td></tr></tbody>
         </table>
       </div>
     </div>
@@ -407,11 +362,8 @@
         <button class="btn-primary" id="btn-add-xerc" onclick="openXercModal()">＋ Xərc Əlavə Et</button>
       </div>
       <div id="readonly-xerc"></div>
-      <div id="xerc-list">
-        <div class="empty-state"><div class="icon">💸</div><p>Hələ xərc əlavə edilməyib</p></div>
-      </div>
+      <div id="xerc-list"><div class="empty-state"><div class="icon">💸</div><p>Hələ xərc əlavə edilməyib</p></div></div>
     </div>
-
   </div>
 </div>
 
@@ -422,8 +374,7 @@
     <div class="modal-row"><label>Məhsulun adı</label><input type="text" id="s-ad" placeholder="məhsulun adını yazın"></div>
     <div class="modal-row"><label>Maya dəyəri (₼)</label><input type="number" id="s-maya" placeholder="0.00" min="0" step="0.01"></div>
     <div class="modal-row"><label>Satış qiyməti (₼)</label><input type="number" id="s-qiymet" placeholder="0.00" min="0" step="0.01"></div>
-    <div class="modal-row">
-      <label>Tarix (Gün / Ay / İl)</label>
+    <div class="modal-row"><label>Tarix (Gün / Ay / İl)</label>
       <div class="date-row"><select id="s-gun"></select><select id="s-ay"></select><select id="s-il"></select></div>
     </div>
     <div class="modal-actions">
@@ -441,8 +392,7 @@
     <div class="modal-row"><label>Məhsulun adı</label><input type="text" id="hm-ad" placeholder="məhsulun adını yazın"></div>
     <div class="modal-row"><label>Maya dəyəri (₼)</label><input type="number" id="hm-maya" placeholder="0.00" min="0" step="0.01"></div>
     <div class="modal-row"><label>Satış qiyməti (₼)</label><input type="number" id="hm-qiymet" placeholder="0.00" min="0" step="0.01"></div>
-    <div class="modal-row">
-      <label>Tarix (Gün / Ay / İl)</label>
+    <div class="modal-row"><label>Tarix (Gün / Ay / İl)</label>
       <div class="date-row"><select id="hm-gun"></select><select id="hm-ay"></select><select id="hm-il"></select></div>
     </div>
     <div class="modal-actions">
@@ -458,8 +408,7 @@
     <h2>Yeni Xərc Əlavə Et</h2>
     <div class="modal-row"><label>Nəyə xərc edildi</label><input type="text" id="x-ad" placeholder="xərcin adını yazın"></div>
     <div class="modal-row"><label>Məbləğ (₼)</label><input type="number" id="x-mebl" placeholder="0.00" min="0" step="0.01"></div>
-    <div class="modal-row">
-      <label>Tarix (Gün / Ay / İl)</label>
+    <div class="modal-row"><label>Tarix (Gün / Ay / İl)</label>
       <div class="date-row"><select id="x-gun"></select><select id="x-ay"></select><select id="x-il"></select></div>
     </div>
     <div class="modal-actions">
@@ -470,7 +419,9 @@
 </div>
 
 <script>
-// ===== ACCOUNTS =====
+// ===== CONFIG =====
+const GS_URL = 'https://script.google.com/macros/s/AKfycbzhPEje4gO5Eay3WKxwH3MMz4fPjHxGCLTYyTp9jyf3SD5S5raa6hwSdxQR9fWxOh5YaQ/exec';
+
 const ACCOUNTS = {
   'zepin1919':    {pass:'1919',     id:'1',     label:'zepin1919',    readonly:false},
   'zepin8146':    {pass:'8146',     id:'2',     label:'zepin8146',    readonly:false},
@@ -481,19 +432,97 @@ const AY_ADLARI = ['Yanvar','Fevral','Mart','Aprel','May','İyun','İyul','Avqus
 let currentUser = null;
 let sales = {}, expenses = {}, hazirMehsullar = {}, xatirlatmalar = {};
 
-// ===== STORAGE =====
-function sk(type, uid){ return `zepin_${type}_${uid}`; }
-function loadData(uid){
-  try{ sales[uid] = JSON.parse(localStorage.getItem(sk('sales',uid))||'[]'); }catch(e){sales[uid]=[];}
-  try{ expenses[uid] = JSON.parse(localStorage.getItem(sk('expenses',uid))||'[]'); }catch(e){expenses[uid]=[];}
-  try{ hazirMehsullar[uid] = JSON.parse(localStorage.getItem(sk('hazir',uid))||'[]'); }catch(e){hazirMehsullar[uid]=[];}
-  try{ xatirlatmalar[uid] = JSON.parse(localStorage.getItem(sk('xat',uid))||'[]'); }catch(e){xatirlatmalar[uid]=[];}
+// ===== SYNC STATUS =====
+function syncStatus(state, text){
+  const bar = document.getElementById('sync-bar');
+  const txt = document.getElementById('sync-text');
+  bar.className = 'sync-bar ' + state;
+  txt.textContent = text;
 }
-function saveData(uid){
-  localStorage.setItem(sk('sales',uid), JSON.stringify(sales[uid]||[]));
-  localStorage.setItem(sk('expenses',uid), JSON.stringify(expenses[uid]||[]));
-  localStorage.setItem(sk('hazir',uid), JSON.stringify(hazirMehsullar[uid]||[]));
-  localStorage.setItem(sk('xat',uid), JSON.stringify(xatirlatmalar[uid]||[]));
+
+// ===== GOOGLE SHEETS API =====
+async function gsGet(uid){
+  syncStatus('syncing','Yüklənir...');
+  try {
+    const url = GS_URL + '?uid=' + encodeURIComponent(uid);
+    const res = await fetch(url);
+    const data = await res.json();
+    syncStatus('ok','Sinxronizasiya olundu');
+    return data;
+  } catch(e) {
+    syncStatus('err','Bağlantı xətası');
+    return null;
+  }
+}
+
+async function gsPost(action, uid, payload){
+  syncStatus('syncing','Saxlanılır...');
+  try {
+    const body = JSON.stringify({ action, uid, ...payload });
+    const res = await fetch(GS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body
+    });
+    const data = await res.json();
+    syncStatus('ok','Saxlandı ✓');
+    return data;
+  } catch(e) {
+    syncStatus('err','Saxlama xətası — lokalda var');
+    return null;
+  }
+}
+
+// ===== LOCAL STORAGE (backup) =====
+function sk(type, uid){ return `zepin_${type}_${uid}`; }
+function saveLocal(uid){
+  localStorage.setItem(sk('sales',uid),     JSON.stringify(sales[uid]||[]));
+  localStorage.setItem(sk('expenses',uid),  JSON.stringify(expenses[uid]||[]));
+  localStorage.setItem(sk('hazir',uid),     JSON.stringify(hazirMehsullar[uid]||[]));
+  localStorage.setItem(sk('xat',uid),       JSON.stringify(xatirlatmalar[uid]||[]));
+}
+function loadLocal(uid){
+  try{ sales[uid]           = JSON.parse(localStorage.getItem(sk('sales',uid))||'[]'); }catch(e){sales[uid]=[];}
+  try{ expenses[uid]        = JSON.parse(localStorage.getItem(sk('expenses',uid))||'[]'); }catch(e){expenses[uid]=[];}
+  try{ hazirMehsullar[uid]  = JSON.parse(localStorage.getItem(sk('hazir',uid))||'[]'); }catch(e){hazirMehsullar[uid]=[];}
+  try{ xatirlatmalar[uid]   = JSON.parse(localStorage.getItem(sk('xat',uid))||'[]'); }catch(e){xatirlatmalar[uid]=[];}
+}
+
+// ===== LOAD FROM SHEETS =====
+async function loadData(uid){
+  // Əvvəl lokal yüklə (ani göstərmə üçün)
+  loadLocal(uid);
+  refreshAll();
+  // Sonra Sheets-dən gətir
+  const data = await gsGet(uid);
+  if(data){
+    if(data.sales)          sales[uid]          = data.sales;
+    if(data.expenses)       expenses[uid]       = data.expenses;
+    if(data.hazir)          hazirMehsullar[uid] = data.hazir;
+    if(data.xatirlatmalar)  xatirlatmalar[uid]  = data.xatirlatmalar;
+    saveLocal(uid); // lokal sinxron et
+    refreshAll();
+  }
+}
+
+// Admin üçün hər iki hesabı yüklə
+async function loadAdminData(){
+  loadLocal('1'); loadLocal('2'); refreshAll();
+  const [d1, d2] = await Promise.all([gsGet('1'), gsGet('2')]);
+  if(d1){ if(d1.sales) sales['1']=d1.sales; if(d1.expenses) expenses['1']=d1.expenses; if(d1.hazir) hazirMehsullar['1']=d1.hazir; if(d1.xatirlatmalar) xatirlatmalar['1']=d1.xatirlatmalar; saveLocal('1'); }
+  if(d2){ if(d2.sales) sales['2']=d2.sales; if(d2.expenses) expenses['2']=d2.expenses; if(d2.hazir) hazirMehsullar['2']=d2.hazir; if(d2.xatirlatmalar) xatirlatmalar['2']=d2.xatirlatmalar; saveLocal('2'); }
+  refreshAll();
+}
+
+// ===== SAVE TO SHEETS =====
+async function saveData(uid){
+  saveLocal(uid);
+  await gsPost('save', uid, {
+    sales:         sales[uid]||[],
+    expenses:      expenses[uid]||[],
+    hazir:         hazirMehsullar[uid]||[],
+    xatirlatmalar: xatirlatmalar[uid]||[]
+  });
 }
 
 // ===== LOGIN =====
@@ -504,23 +533,23 @@ function doLogin(){
   if(!acc || acc.pass!==p){ document.getElementById('login-error').style.display='block'; return; }
   document.getElementById('login-error').style.display='none';
   currentUser = acc;
-  if(acc.id==='admin'){ loadData('1'); loadData('2'); } else { loadData(acc.id); }
   const initial = acc.label[0].toUpperCase();
-  document.getElementById('user-badge').textContent = acc.label;
-  document.getElementById('user-avatar').textContent = initial;
-  document.getElementById('udrop-avatar').textContent = initial;
-  document.getElementById('udrop-uname').textContent = acc.label;
-  document.getElementById('udrop-role').textContent = acc.readonly ? 'Hesabat Görüntüləyici' : 'İstifadəçi';
-  document.getElementById('login-screen').style.display='none';
-  document.getElementById('app').style.display='flex';
+  document.getElementById('user-badge').textContent    = acc.label;
+  document.getElementById('user-avatar').textContent   = initial;
+  document.getElementById('udrop-avatar').textContent  = initial;
+  document.getElementById('udrop-uname').textContent   = acc.label;
+  document.getElementById('udrop-role').textContent    = acc.readonly ? 'Hesabat Görüntüləyici' : 'İstifadəçi';
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'flex';
   setupReadOnly();
   initHesabatFilters();
   populateDateSelects('s-gun','s-ay','s-il');
   populateDateSelects('x-gun','x-ay','x-il');
   populateDateSelects('hm-gun','hm-ay','hm-il');
   populateDateSelects('xat-gun','xat-ay','xat-il');
-  refreshAll();
+  if(acc.id==='admin'){ loadAdminData(); } else { loadData(acc.id); }
 }
+
 function doLogout(){
   currentUser=null;
   document.getElementById('login-screen').style.display='flex';
@@ -530,11 +559,10 @@ function doLogout(){
   document.getElementById('user-dropdown').classList.remove('open');
   document.getElementById('user-btn').classList.remove('open');
 }
+
 function setupReadOnly(){
   const ro = currentUser.readonly;
-  ['btn-add-sale','btn-add-hazir','btn-add-xerc'].forEach(id=>{
-    const el=document.getElementById(id); if(el) el.style.display=ro?'none':'';
-  });
+  ['btn-add-sale','btn-add-hazir','btn-add-xerc'].forEach(id=>{ const el=document.getElementById(id); if(el) el.style.display=ro?'none':''; });
   document.getElementById('udrop-add-section').style.display = ro ? 'none' : '';
   const msg = ro ? '<div class="readonly-notice">👁 Bu hesab yalnız oxumaq üçündür. Bütün hesabların məlumatları göstərilir.</div>' : '';
   ['readonly-mehsullar','readonly-hesabat','readonly-xerc'].forEach(id=>{ document.getElementById(id).innerHTML=msg; });
@@ -542,19 +570,14 @@ function setupReadOnly(){
 
 // ===== USER DROPDOWN =====
 function toggleUserDropdown(){
-  const dd = document.getElementById('user-dropdown');
-  const btn = document.getElementById('user-btn');
-  const isOpen = dd.classList.contains('open');
-  dd.classList.toggle('open');
-  btn.classList.toggle('open');
+  const dd=document.getElementById('user-dropdown'), btn=document.getElementById('user-btn');
+  const isOpen=dd.classList.contains('open');
+  dd.classList.toggle('open'); btn.classList.toggle('open');
   if(!isOpen) refreshXatirlatmalar();
 }
-document.addEventListener('click', e=>{
-  const dd = document.getElementById('user-dropdown');
-  const btn = document.getElementById('user-btn');
-  if(dd && btn && !dd.contains(e.target) && !btn.contains(e.target)){
-    dd.classList.remove('open'); btn.classList.remove('open');
-  }
+document.addEventListener('click',e=>{
+  const dd=document.getElementById('user-dropdown'), btn=document.getElementById('user-btn');
+  if(dd&&btn&&!dd.contains(e.target)&&!btn.contains(e.target)){ dd.classList.remove('open'); btn.classList.remove('open'); }
 });
 
 // ===== TABS =====
@@ -568,7 +591,7 @@ function showTab(name){
 
 // ===== DATE HELPERS =====
 function bakuNow(){ return new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Baku'})); }
-function populateSel(id, items, selected){
+function populateSel(id,items,selected){
   const s=document.getElementById(id); if(!s) return;
   s.innerHTML='';
   items.forEach(item=>{ const o=document.createElement('option'); o.value=item.v; o.textContent=item.l; if(item.v==selected) o.selected=true; s.appendChild(o); });
@@ -581,33 +604,23 @@ function populateDateSelects(gId,aId,iId,dg,da,di){
   const ys=[]; for(let y=2020;y<=now.getFullYear()+2;y++) ys.push({v:y,l:String(y)});
   populateSel(iId, ys, il);
 }
-function populateFilterSel(id, items, placeholder){
+function populateFilterSel(id,items,placeholder){
   const s=document.getElementById(id); if(!s) return;
   const cur=s.value; s.innerHTML=`<option value="">${placeholder}</option>`;
   items.forEach(v=>{ const o=document.createElement('option'); o.value=v.v; o.textContent=v.l; if(String(v.v)===String(cur)) o.selected=true; s.appendChild(o); });
 }
 
-// ===== HESABAT FILTER INIT =====
+// ===== HESABAT FILTER =====
 function initHesabatFilters(){
   const now=bakuNow();
   ['h-gun','h-ay','h-il'].forEach(id=>{ const el=document.getElementById(id); if(el) el._init=false; });
   const hg=document.getElementById('h-gun'), ha=document.getElementById('h-ay'), hi=document.getElementById('h-il');
-  if(hg&&!hg._init){
-    hg._init=true; hg.innerHTML='<option value="">Bütün günlər</option>';
-    for(let d=1;d<=31;d++){const o=document.createElement('option');o.value=d;o.textContent=String(d).padStart(2,'0');hg.appendChild(o);}
-    hg.addEventListener('change',refreshHesabat);
-  }
-  if(ha&&!ha._init){
-    ha._init=true; ha.innerHTML='<option value="">Bütün aylar</option>';
-    AY_ADLARI.forEach((n,i)=>{const o=document.createElement('option');o.value=i+1;o.textContent=n;ha.appendChild(o);});
-    ha.addEventListener('change',refreshHesabat);
-  }
-  if(hi&&!hi._init){
-    hi._init=true; hi.innerHTML='<option value="">Bütün illər</option>';
-    for(let y=2020;y<=now.getFullYear()+2;y++){const o=document.createElement('option');o.value=y;o.textContent=String(y);hi.appendChild(o);}
-    hi.addEventListener('change',refreshHesabat);
-  }
+  if(hg&&!hg._init){ hg._init=true; hg.innerHTML='<option value="">Bütün günlər</option>'; for(let d=1;d<=31;d++){const o=document.createElement('option');o.value=d;o.textContent=String(d).padStart(2,'0');hg.appendChild(o);} hg.addEventListener('change',refreshHesabat); }
+  if(ha&&!ha._init){ ha._init=true; ha.innerHTML='<option value="">Bütün aylar</option>'; AY_ADLARI.forEach((n,i)=>{const o=document.createElement('option');o.value=i+1;o.textContent=n;ha.appendChild(o);}); ha.addEventListener('change',refreshHesabat); }
+  if(hi&&!hi._init){ hi._init=true; hi.innerHTML='<option value="">Bütün illər</option>'; for(let y=2020;y<=now.getFullYear()+2;y++){const o=document.createElement('option');o.value=y;o.textContent=String(y);hi.appendChild(o);} hi.addEventListener('change',refreshHesabat); }
 }
+function resetHesabatFilter(){ ['h-gun','h-ay','h-il'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; }); refreshHesabat(); }
+
 function populateAllSelects(){
   const all=getActiveSales();
   const gs=[...new Set(all.map(s=>s.gun))].sort((a,b)=>a-b);
@@ -640,9 +653,11 @@ function getActiveXatirlatmalar(){
 function azn(n){ return Number(n).toLocaleString('az-AZ',{minimumFractionDigits:2,maximumFractionDigits:2})+' ₼'; }
 function dateStr(s){ return `${String(s.gun).padStart(2,'0')} ${AY_ADLARI[s.ay-1]} ${s.il}`; }
 function genId(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,6); }
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-// ===== REFRESH ALL =====
+// ===== REFRESH =====
 function refreshAll(){
+  if(!currentUser) return;
   populateAllSelects();
   refreshMehsullar();
   refreshHazirGrid();
@@ -651,118 +666,43 @@ function refreshAll(){
   refreshXerc();
 }
 
-// ===== MEHSULLAR =====
 function refreshMehsullar(){
   const tbody=document.getElementById('mehsullar-tbody');
   const data=[...getActiveSales()].reverse();
   if(!data.length){ tbody.innerHTML='<tr><td colspan="7"><div class="empty-state"><div class="icon">📦</div><p>Hələ satış əlavə edilməyib</p></div></td></tr>'; return; }
-  tbody.innerHTML=data.map((s,i)=>`
-    <tr>
-      <td style="color:var(--muted)">${data.length-i}</td>
-      <td><b>${esc(s.ad)}</b></td>
-      <td class="badge-cost">${azn(s.maya)}</td>
-      <td class="badge-price">${azn(s.qiymet)}</td>
-      <td class="badge-profit">${azn(s.qiymet-s.maya)}</td>
-      <td style="color:var(--muted);font-size:.82rem">${dateStr(s)}</td>
-      <td>${currentUser.readonly?'':`<button class="btn-del" onclick="delSale('${s.id}')">✕</button>`}</td>
-    </tr>`).join('');
+  tbody.innerHTML=data.map((s,i)=>`<tr>
+    <td style="color:var(--muted)">${data.length-i}</td>
+    <td><b>${esc(s.ad)}</b></td>
+    <td class="badge-cost">${azn(s.maya)}</td>
+    <td class="badge-price">${azn(s.qiymet)}</td>
+    <td class="badge-profit">${azn(s.qiymet-s.maya)}</td>
+    <td style="color:var(--muted);font-size:.82rem">${dateStr(s)}</td>
+    <td>${currentUser.readonly?'':`<button class="btn-del" onclick="delSale('${s.id}')">✕</button>`}</td>
+  </tr>`).join('');
 }
 
-// ===== HAZIR MƏHSULLAR =====
 function refreshHazirGrid(){
   const grid=document.getElementById('hazir-grid');
   const data=getActiveHazir();
   if(!data.length){ grid.innerHTML='<div class="hazir-empty">Hələ hazır məhsul əlavə edilməyib</div>'; return; }
-  grid.innerHTML=data.map(h=>`
-    <div class="hazir-card">
-      <div class="hazir-card-name" title="${esc(h.ad)}">${esc(h.ad)}</div>
-      <div class="hazir-card-maya">Maya: ${azn(h.maya)}</div>
-      <div class="hazir-card-qiymet">${azn(h.qiymet)}</div>
-      <div class="hazir-card-actions">
-        ${currentUser.readonly?'':`<button class="btn-sat" onclick="satHazir('${h.id}')">Sat</button>
-        <button class="btn-edit-small" title="Düzənlə" onclick="editHazir('${h.id}')">✏</button>
-        <button class="btn-del-small" title="Sil" onclick="delHazir('${h.id}')">✕</button>`}
-        ${currentUser.readonly?`<span style="font-size:.7rem;color:var(--muted)">Yalnız baxış</span>`:''}
-      </div>
-    </div>`).join('');
-}
-function openHazirModal(editId){
-  if(currentUser.readonly) return;
-  document.getElementById('hazir-edit-id').value = editId||'';
-  document.getElementById('hazir-modal-title').textContent = editId ? 'Hazır Məhsulu Düzənlə' : 'Hazır Məhsul Əlavə Et';
-  if(editId){
-    const h=(hazirMehsullar[currentUser.id]||[]).find(x=>x.id===editId);
-    if(h){
-      document.getElementById('hm-ad').value=h.ad;
-      document.getElementById('hm-maya').value=h.maya;
-      document.getElementById('hm-qiymet').value=h.qiymet;
-      populateDateSelects('hm-gun','hm-ay','hm-il',h.gun,h.ay,h.il);
-    }
-  } else {
-    document.getElementById('hm-ad').value='';
-    document.getElementById('hm-maya').value='';
-    document.getElementById('hm-qiymet').value='';
-    populateDateSelects('hm-gun','hm-ay','hm-il');
-  }
-  document.getElementById('hazir-modal').classList.add('open');
-}
-function editHazir(id){ openHazirModal(id); }
-function saveHazir(){
-  const ad=document.getElementById('hm-ad').value.trim();
-  const maya=parseFloat(document.getElementById('hm-maya').value);
-  const qiymet=parseFloat(document.getElementById('hm-qiymet').value);
-  const gun=parseInt(document.getElementById('hm-gun').value);
-  const ay=parseInt(document.getElementById('hm-ay').value);
-  const il=parseInt(document.getElementById('hm-il').value);
-  if(!ad||isNaN(maya)||isNaN(qiymet)){alert('Zəhmət olmasa bütün sahələri doldurun.');return;}
-  const uid=currentUser.id;
-  if(!hazirMehsullar[uid]) hazirMehsullar[uid]=[];
-  const editId=document.getElementById('hazir-edit-id').value;
-  if(editId){
-    const idx=hazirMehsullar[uid].findIndex(h=>h.id===editId);
-    if(idx>=0) hazirMehsullar[uid][idx]={id:editId,ad,maya,qiymet,gun,ay,il};
-  } else {
-    hazirMehsullar[uid].push({id:genId(),ad,maya,qiymet,gun,ay,il});
-  }
-  saveData(uid);
-  closeModal('hazir-modal');
-  refreshAll();
-}
-function delHazir(id){
-  if(!confirm('Bu hazır məhsulu silmək istəyirsiniz?')) return;
-  const uid=currentUser.id;
-  hazirMehsullar[uid]=(hazirMehsullar[uid]||[]).filter(h=>h.id!==id);
-  saveData(uid);
-  refreshAll();
-}
-function satHazir(id){
-  const uid=currentUser.id;
-  const h=(hazirMehsullar[uid]||[]).find(x=>x.id===id);
-  if(!h) return;
-  if(!sales[uid]) sales[uid]=[];
-  const now=bakuNow();
-  sales[uid].push({id:genId(),ad:h.ad,maya:h.maya,qiymet:h.qiymet,gun:now.getDate(),ay:now.getMonth()+1,il:now.getFullYear()});
-  saveData(uid);
-  refreshAll();
-  // Flash feedback
-  const cards=document.querySelectorAll('.hazir-card');
-  cards.forEach(c=>{ if(c.querySelector('.hazir-card-name')&&c.querySelector('.hazir-card-name').title===h.ad){
-    c.style.border='1px solid var(--success)';setTimeout(()=>c.style.border='',800);
-  }});
+  grid.innerHTML=data.map(h=>`<div class="hazir-card">
+    <div class="hazir-card-name" title="${esc(h.ad)}">${esc(h.ad)}</div>
+    <div class="hazir-card-maya">Maya: ${azn(h.maya)}</div>
+    <div class="hazir-card-qiymet">${azn(h.qiymet)}</div>
+    <div class="hazir-card-actions">
+      ${currentUser.readonly?`<span style="font-size:.7rem;color:var(--muted)">Yalnız baxış</span>`:`
+      <button class="btn-sat" onclick="satHazir('${h.id}')">Sat</button>
+      <button class="btn-edit-small" onclick="editHazir('${h.id}')">✏</button>
+      <button class="btn-del-small" onclick="delHazir('${h.id}')">✕</button>`}
+    </div>
+  </div>`).join('');
 }
 
-// ===== HESABAT =====
-function resetHesabatFilter(){
-  ['h-gun','h-ay','h-il'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; });
-  refreshHesabat();
-}
 function refreshHesabat(){
-  const g=document.getElementById('h-gun')?.value||'';
-  const a=document.getElementById('h-ay')?.value||'';
-  const il=document.getElementById('h-il')?.value||'';
+  const g=document.getElementById('h-gun')?.value||'', a=document.getElementById('h-ay')?.value||'', il=document.getElementById('h-il')?.value||'';
   let sData=getActiveSales(), xData=getActiveExpenses();
   if(g){ sData=sData.filter(s=>String(s.gun)===g); xData=xData.filter(x=>String(x.gun)===g); }
-  if(a){ sData=sData.filter(s=>String(s.ay)===a); xData=xData.filter(x=>String(x.ay)===a); }
+  if(a){ sData=sData.filter(s=>String(s.ay)===a);  xData=xData.filter(x=>String(x.ay)===a); }
   if(il){ sData=sData.filter(s=>String(s.il)===il); xData=xData.filter(x=>String(x.il)===il); }
   const ciro=sData.reduce((a,c)=>a+Number(c.qiymet),0);
   const maya=sData.reduce((a,c)=>a+Number(c.maya),0);
@@ -775,7 +715,6 @@ function refreshHesabat(){
   document.getElementById('stat-net').style.color=net>=0?'var(--success)':'var(--danger)';
 }
 
-// ===== TARİXÇƏ =====
 function refreshTarixce(){
   const tbody=document.getElementById('tarixce-tbody');
   const g=document.getElementById('t-gun').value, a=document.getElementById('t-ay').value, il=document.getElementById('t-il').value;
@@ -784,128 +723,169 @@ function refreshTarixce(){
   if(a) data=data.filter(s=>String(s.ay)===a);
   if(il) data=data.filter(s=>String(s.il)===il);
   if(!data.length){ tbody.innerHTML='<tr><td colspan="6"><div class="empty-state"><div class="icon">📋</div><p>Bu tarixə aid satış yoxdur</p></div></td></tr>'; return; }
-  tbody.innerHTML=data.map((s,i)=>`
-    <tr>
-      <td style="color:var(--muted)">${data.length-i}</td><td><b>${esc(s.ad)}</b></td>
-      <td class="badge-cost">${azn(s.maya)}</td><td class="badge-price">${azn(s.qiymet)}</td>
-      <td class="badge-profit">${azn(s.qiymet-s.maya)}</td>
-      <td style="color:var(--muted);font-size:.82rem">${dateStr(s)}</td>
-    </tr>`).join('');
+  tbody.innerHTML=data.map((s,i)=>`<tr>
+    <td style="color:var(--muted)">${data.length-i}</td>
+    <td><b>${esc(s.ad)}</b></td>
+    <td class="badge-cost">${azn(s.maya)}</td>
+    <td class="badge-price">${azn(s.qiymet)}</td>
+    <td class="badge-profit">${azn(s.qiymet-s.maya)}</td>
+    <td style="color:var(--muted);font-size:.82rem">${dateStr(s)}</td>
+  </tr>`).join('');
 }
 
-// ===== XƏRC =====
 function refreshXerc(){
   const list=document.getElementById('xerc-list');
   const data=getActiveExpenses();
   if(!data.length){ list.innerHTML='<div class="empty-state"><div class="icon">💸</div><p>Hələ xərc əlavə edilməyib</p></div>'; return; }
-  list.innerHTML=data.map(x=>`
-    <div class="xerc-item">
-      <div><div class="xerc-name">${esc(x.ad)}</div><div class="xerc-date">${dateStr(x)}</div></div>
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="xerc-amount">−${azn(x.mebl)}</div>
-        ${currentUser.readonly?'':`<button class="btn-del" onclick="delXerc('${x.id}')">✕</button>`}
-      </div>
-    </div>`).join('');
+  list.innerHTML=data.map(x=>`<div class="xerc-item">
+    <div><div class="xerc-name">${esc(x.ad)}</div><div class="xerc-date">${dateStr(x)}</div></div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="xerc-amount">−${azn(x.mebl)}</div>
+      ${currentUser.readonly?'':`<button class="btn-del" onclick="delXerc('${x.id}')">✕</button>`}
+    </div>
+  </div>`).join('');
 }
 
-// ===== XATİRLATMALAR =====
 function refreshXatirlatmalar(){
   const list=document.getElementById('xatirlatma-list');
   const data=getActiveXatirlatmalar();
   if(!data.length){ list.innerHTML='<div class="xatirlatma-empty">Xatırlatma yoxdur</div>'; return; }
-  list.innerHTML=data.map(x=>`
-    <div class="xatirlatma-item">
-      <div class="xatirlatma-item-left">
-        <div class="xatirlatma-item-ad">${esc(x.ad)}</div>
-        ${x.mebl?`<div class="xatirlatma-item-mebl">${azn(x.mebl)}</div>`:''}
-        ${x.qeyd?`<div class="xatirlatma-item-qeyd">${esc(x.qeyd)}</div>`:''}
-        <div class="xatirlatma-item-tarix">📅 ${dateStr(x)}</div>
-      </div>
-      ${currentUser.readonly?'':`<button class="btn-xdel" onclick="delXatirlatma('${x.id}')">✕</button>`}
-    </div>`).join('');
+  list.innerHTML=data.map(x=>`<div class="xatirlatma-item">
+    <div>
+      <div class="xatirlatma-item-ad">${esc(x.ad)}</div>
+      ${x.mebl?`<div class="xatirlatma-item-mebl">${azn(x.mebl)}</div>`:''}
+      ${x.qeyd?`<div class="xatirlatma-item-qeyd">${esc(x.qeyd)}</div>`:''}
+      <div class="xatirlatma-item-tarix">📅 ${dateStr(x)}</div>
+    </div>
+    ${currentUser.readonly?'':`<button class="btn-xdel" onclick="delXatirlatma('${x.id}')">✕</button>`}
+  </div>`).join('');
 }
-function addXatirlatma(){
+
+// ===== XATIRLATMA =====
+async function addXatirlatma(){
   const ad=document.getElementById('xat-ad').value.trim();
   const mebl=document.getElementById('xat-mebl').value;
   const qeyd=document.getElementById('xat-qeyd').value.trim();
   const gun=parseInt(document.getElementById('xat-gun').value);
   const ay=parseInt(document.getElementById('xat-ay').value);
   const il=parseInt(document.getElementById('xat-il').value);
-  if(!ad){alert('Xatırlatma adı daxil edin.');return;}
+  if(!ad){ alert('Xatırlatma adı daxil edin.'); return; }
   const uid=currentUser.id;
   if(!xatirlatmalar[uid]) xatirlatmalar[uid]=[];
   xatirlatmalar[uid].push({id:genId(),ad,mebl:mebl?parseFloat(mebl):null,qeyd,gun,ay,il});
-  saveData(uid);
   document.getElementById('xat-ad').value='';
   document.getElementById('xat-mebl').value='';
   document.getElementById('xat-qeyd').value='';
+  await saveData(uid);
   refreshXatirlatmalar();
 }
-function delXatirlatma(id){
+async function delXatirlatma(id){
   const uid=currentUser.id;
   xatirlatmalar[uid]=(xatirlatmalar[uid]||[]).filter(x=>x.id!==id);
-  saveData(uid);
+  await saveData(uid);
   refreshXatirlatmalar();
+}
+
+// ===== HAZIR MƏHSUL =====
+function openHazirModal(editId){
+  if(currentUser.readonly) return;
+  document.getElementById('hazir-edit-id').value=editId||'';
+  document.getElementById('hazir-modal-title').textContent=editId?'Hazır Məhsulu Düzənlə':'Hazır Məhsul Əlavə Et';
+  if(editId){
+    const h=(hazirMehsullar[currentUser.id]||[]).find(x=>x.id===editId);
+    if(h){ document.getElementById('hm-ad').value=h.ad; document.getElementById('hm-maya').value=h.maya; document.getElementById('hm-qiymet').value=h.qiymet; populateDateSelects('hm-gun','hm-ay','hm-il',h.gun,h.ay,h.il); }
+  } else {
+    document.getElementById('hm-ad').value=''; document.getElementById('hm-maya').value=''; document.getElementById('hm-qiymet').value='';
+    populateDateSelects('hm-gun','hm-ay','hm-il');
+  }
+  document.getElementById('hazir-modal').classList.add('open');
+}
+function editHazir(id){ openHazirModal(id); }
+async function saveHazir(){
+  const ad=document.getElementById('hm-ad').value.trim();
+  const maya=parseFloat(document.getElementById('hm-maya').value);
+  const qiymet=parseFloat(document.getElementById('hm-qiymet').value);
+  const gun=parseInt(document.getElementById('hm-gun').value);
+  const ay=parseInt(document.getElementById('hm-ay').value);
+  const il=parseInt(document.getElementById('hm-il').value);
+  if(!ad||isNaN(maya)||isNaN(qiymet)){ alert('Bütün sahələri doldurun.'); return; }
+  const uid=currentUser.id;
+  if(!hazirMehsullar[uid]) hazirMehsullar[uid]=[];
+  const editId=document.getElementById('hazir-edit-id').value;
+  if(editId){ const idx=hazirMehsullar[uid].findIndex(h=>h.id===editId); if(idx>=0) hazirMehsullar[uid][idx]={id:editId,ad,maya,qiymet,gun,ay,il}; }
+  else { hazirMehsullar[uid].push({id:genId(),ad,maya,qiymet,gun,ay,il}); }
+  await saveData(uid);
+  closeModal('hazir-modal');
+  refreshAll();
+}
+async function delHazir(id){
+  const uid=currentUser.id;
+  hazirMehsullar[uid]=(hazirMehsullar[uid]||[]).filter(h=>h.id!==id);
+  await saveData(uid);
+  refreshAll();
+}
+async function satHazir(id){
+  const uid=currentUser.id;
+  const h=(hazirMehsullar[uid]||[]).find(x=>x.id===id);
+  if(!h) return;
+  if(!sales[uid]) sales[uid]=[];
+  const now=bakuNow();
+  sales[uid].push({id:genId(),ad:h.ad,maya:h.maya,qiymet:h.qiymet,gun:now.getDate(),ay:now.getMonth()+1,il:now.getFullYear()});
+  await saveData(uid);
+  refreshAll();
 }
 
 // ===== MODAL =====
-function openSaleModal(){
-  if(currentUser.readonly) return;
-  populateDateSelects('s-gun','s-ay','s-il');
-  ['s-ad','s-maya','s-qiymet'].forEach(id=>document.getElementById(id).value='');
-  document.getElementById('sale-modal').classList.add('open');
-}
-function openXercModal(){
-  if(currentUser.readonly) return;
-  populateDateSelects('x-gun','x-ay','x-il');
-  ['x-ad','x-mebl'].forEach(id=>document.getElementById(id).value='');
-  document.getElementById('xerc-modal').classList.add('open');
-}
+function openSaleModal(){ if(currentUser.readonly) return; populateDateSelects('s-gun','s-ay','s-il'); ['s-ad','s-maya','s-qiymet'].forEach(id=>document.getElementById(id).value=''); document.getElementById('sale-modal').classList.add('open'); }
+function openXercModal(){ if(currentUser.readonly) return; populateDateSelects('x-gun','x-ay','x-il'); ['x-ad','x-mebl'].forEach(id=>document.getElementById(id).value=''); document.getElementById('xerc-modal').classList.add('open'); }
 function closeModal(id){ document.getElementById(id).classList.remove('open'); }
 
-// ===== ADD =====
-function addSale(){
+// ===== ADD SALE / EXPENSE =====
+async function addSale(){
   const ad=document.getElementById('s-ad').value.trim();
   const maya=parseFloat(document.getElementById('s-maya').value);
   const qiymet=parseFloat(document.getElementById('s-qiymet').value);
   const gun=parseInt(document.getElementById('s-gun').value);
   const ay=parseInt(document.getElementById('s-ay').value);
   const il=parseInt(document.getElementById('s-il').value);
-  if(!ad||isNaN(maya)||isNaN(qiymet)){alert('Zəhmət olmasa bütün sahələri doldurun.');return;}
+  if(!ad||isNaN(maya)||isNaN(qiymet)){ alert('Bütün sahələri doldurun.'); return; }
   const uid=currentUser.id;
   if(!sales[uid]) sales[uid]=[];
   sales[uid].push({id:genId(),ad,maya,qiymet,gun,ay,il});
-  saveData(uid); closeModal('sale-modal'); refreshAll();
+  await saveData(uid);
+  closeModal('sale-modal');
+  refreshAll();
 }
-function addXerc(){
+async function addXerc(){
   const ad=document.getElementById('x-ad').value.trim();
   const mebl=parseFloat(document.getElementById('x-mebl').value);
   const gun=parseInt(document.getElementById('x-gun').value);
   const ay=parseInt(document.getElementById('x-ay').value);
   const il=parseInt(document.getElementById('x-il').value);
-  if(!ad||isNaN(mebl)){alert('Zəhmət olmasa bütün sahələri doldurun.');return;}
+  if(!ad||isNaN(mebl)){ alert('Bütün sahələri doldurun.'); return; }
   const uid=currentUser.id;
   if(!expenses[uid]) expenses[uid]=[];
   expenses[uid].push({id:genId(),ad,mebl,gun,ay,il});
-  saveData(uid); closeModal('xerc-modal'); refreshAll();
+  await saveData(uid);
+  closeModal('xerc-modal');
+  refreshAll();
 }
 
 // ===== DELETE =====
-function delSale(id){
-  if(!confirm('Bu satışı silmək istəyirsiniz?')) return;
+async function delSale(id){
   const uid=currentUser.id;
   sales[uid]=(sales[uid]||[]).filter(s=>s.id!==id);
-  saveData(uid); refreshAll();
+  await saveData(uid);
+  refreshAll();
 }
-function delXerc(id){
-  if(!confirm('Bu xərci silmək istəyirsiniz?')) return;
+async function delXerc(id){
   const uid=currentUser.id;
   expenses[uid]=(expenses[uid]||[]).filter(x=>x.id!==id);
-  saveData(uid); refreshAll();
+  await saveData(uid);
+  refreshAll();
 }
 
-// ===== EXPORT =====
-function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+// ===== EXPORT CSV =====
 function downloadCSV(content,filename){
   try{
     const blob=new Blob([content],{type:'text/csv;charset=utf-8;'});
@@ -920,19 +900,15 @@ function downloadCSV(content,filename){
     setTimeout(()=>document.body.removeChild(a),300);
   }
 }
-function buildCSV(rows,headers){
-  return '\uFEFF'+[headers,...rows].map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
-}
+function buildCSV(rows,headers){ return '\uFEFF'+[headers,...rows].map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n'); }
 function exportTarixce(){
   const g=document.getElementById('t-gun').value, a=document.getElementById('t-ay').value, il=document.getElementById('t-il').value;
-  let data=getActiveSales();
+  let data=[...getActiveSales()].reverse();
   if(g) data=data.filter(s=>String(s.gun)===g);
   if(a) data=data.filter(s=>String(s.ay)===a);
   if(il) data=data.filter(s=>String(s.il)===il);
-  if(!data.length){alert('Göstəriləcək məlumat yoxdur.');return;}
-  const csv=buildCSV(data.map((s,i)=>[i+1,s.ad,s.maya,s.qiymet,(s.qiymet-s.maya).toFixed(2),dateStr(s)]),
-    ['#','Məhsul adı','Maya (₼)','Satış (₼)','Mənfəət (₼)','Tarix']);
-  downloadCSV(csv,`zepin_tarixce${g?'_'+g:''}${a?'_'+AY_ADLARI[a-1]:''}${il?'_'+il:''}.csv`);
+  if(!data.length){ alert('Göstəriləcək məlumat yoxdur.'); return; }
+  downloadCSV(buildCSV(data.map((s,i)=>[data.length-i,s.ad,s.maya,s.qiymet,(s.qiymet-s.maya).toFixed(2),dateStr(s)]),['#','Məhsul adı','Maya (₼)','Satış (₼)','Mənfəət (₼)','Tarix']),`zepin_tarixce${g?'_'+g:''}${a?'_'+AY_ADLARI[a-1]:''}${il?'_'+il:''}.csv`);
 }
 function exportHesabat(){
   const g=document.getElementById('h-gun').value, a=document.getElementById('h-ay').value, il=document.getElementById('h-il').value;
@@ -940,30 +916,22 @@ function exportHesabat(){
   if(g){sData=sData.filter(s=>String(s.gun)===g);xData=xData.filter(x=>String(x.gun)===g);}
   if(a){sData=sData.filter(s=>String(s.ay)===a);xData=xData.filter(x=>String(x.ay)===a);}
   if(il){sData=sData.filter(s=>String(s.il)===il);xData=xData.filter(x=>String(x.il)===il);}
-  const ciro=sData.reduce((a,c)=>a+Number(c.qiymet),0);
-  const maya=sData.reduce((a,c)=>a+Number(c.maya),0);
-  const xerc=xData.reduce((a,c)=>a+Number(c.mebl),0);
-  const net=ciro-maya-xerc;
-  const rows=[
-    ['Göstərici','Məbləğ (₼)'],
-    ['Ciro',ciro.toFixed(2)],['Maya',maya.toFixed(2)],['Xərc',xerc.toFixed(2)],['Xalis Qazanc',net.toFixed(2)],
-    ['',''],['--- Satışlar ---',''],
-    ...sData.map((s,i)=>[`${i+1}. ${s.ad}`,s.qiymet]),
-    ['',''],['--- Xərclər ---',''],
-    ...xData.map((x,i)=>[`${i+1}. ${x.ad}`,x.mebl]),
-  ];
-  const csv='\uFEFF'+rows.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
-  downloadCSV(csv,`zepin_hesabat${g?'_'+g:''}${a?'_'+AY_ADLARI[a-1]:''}${il?'_'+il:''}.csv`);
+  const ciro=sData.reduce((a,c)=>a+Number(c.qiymet),0), maya=sData.reduce((a,c)=>a+Number(c.maya),0);
+  const xerc=xData.reduce((a,c)=>a+Number(c.mebl),0), net=ciro-maya-xerc;
+  const rows=[['Göstərici','Məbləğ (₼)'],['Ciro',ciro.toFixed(2)],['Maya',maya.toFixed(2)],['Xərc',xerc.toFixed(2)],['Xalis Qazanc',net.toFixed(2)],['',''],['--- Satışlar ---',''],...sData.map((s,i)=>[`${i+1}. ${s.ad}`,s.qiymet]),['',''],['--- Xərclər ---',''],...xData.map((x,i)=>[`${i+1}. ${x.ad}`,x.mebl])];
+  downloadCSV('\uFEFF'+rows.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n'),`zepin_hesabat${g?'_'+g:''}${a?'_'+AY_ADLARI[a-1]:''}${il?'_'+il:''}.csv`);
 }
 
 // ===== EVENTS =====
 document.getElementById('login-pass').addEventListener('keydown',e=>{ if(e.key==='Enter') doLogin(); });
 document.getElementById('login-user').addEventListener('keydown',e=>{ if(e.key==='Enter') doLogin(); });
-document.querySelectorAll('.modal-overlay').forEach(ov=>{
-  ov.addEventListener('click',e=>{ if(e.target===ov) ov.classList.remove('open'); });
-});
-['t-gun','t-ay','t-il'].forEach(id=>{
-  document.getElementById(id).addEventListener('change',()=>refreshTarixce());
+document.querySelectorAll('.modal-overlay').forEach(ov=>{ ov.addEventListener('click',e=>{ if(e.target===ov) ov.classList.remove('open'); }); });
+['t-gun','t-ay','t-il'].forEach(id=>{ document.getElementById(id).addEventListener('change',()=>refreshTarixce()); });
+
+// ===== INIT — loading overlay gizlət, login göstər =====
+window.addEventListener('load', ()=>{
+  document.getElementById('loading-overlay').style.display='none';
+  document.getElementById('login-screen').style.display='flex';
 });
 </script>
 </body>
